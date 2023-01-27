@@ -305,7 +305,7 @@ namespace microbiti2cesp32 {
     }
 	
     //% group="9.HTTP_COMMAND"
-    //% blockId=http_command1() block="Microbit data"
+    //% blockId=http_command1() block="Microbit data %data"
     //% weight=29
     //% blockExternalInputs = 1
     export function http_command1(data: string) {
