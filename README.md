@@ -1,4 +1,4 @@
-# Microbiti2cArduino
+# Microbiti2cESP32
 
 Micro:Bit用i2c控制ESP32積木,目前測試用在凱斯家控板上
 
