@@ -291,13 +291,13 @@ namespace microbiti2cesp32 {
     }
 	
     //% group="9.HTTP_COMMAND"
-    //% blockId=iprequest block="Read HTTP COMMAND"
+    //% blockId=http_command() block="Read HTTP COMMAND"
     //% weight=29
     //% blockExternalInputs = 1
     export function http_command():string {
 	check()
         let a=receivei2cmessage("http_r=").substr(1)
-   	if (!a.includes("http_command="))
+   	if (!a.includes("http_r"))
            a=receivei2cmessage("http_r=").substr(1)
 	basic.pause(100)
         a=a.substr(6)
