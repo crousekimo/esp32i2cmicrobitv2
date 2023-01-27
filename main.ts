@@ -303,7 +303,15 @@ namespace microbiti2cesp32 {
         a=a.substr(6)
 	return a
     }
-
+	
+    //% group="9.HTTP_COMMAND"
+    //% blockId=http_command1() block="Microbit data"
+    //% weight=29
+    //% blockExternalInputs = 1
+    export function http_command1() {
+        sendi2cmessage("http_d=") 
+	basic.pause(200)
+    }
 	
 	
 	
