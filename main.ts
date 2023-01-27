@@ -227,7 +227,7 @@ namespace microbiti2cesp32 {
     }     
 
 	
-     //% group="6.IFTTT"  
+    //% group="6.IFTTT"  
     //% blockId=sendifttt block="send ifttt key %key | event %event | value1 %value1 | value2 %value2 | value3 %value3"
     //% weight=50
     export function sendifttt(key: string, event: string, value1: string, value2: string, value3: string):void {
@@ -237,7 +237,7 @@ namespace microbiti2cesp32 {
     }
 
 	
-     //% group="7.NTP"  
+    //% group="7.NTP"  
     //% blockId=ntpsetup block="NTP setup"
     //% weight=70
     export function ntpsetup():void {
@@ -289,6 +289,21 @@ namespace microbiti2cesp32 {
         sendi2cmessage("google=") 
 	basic.pause(200)
     }
+	
+    //% group="9.HTTP_COMMAND"
+    //% blockId=iprequest block="Read HTTP COMMAND"
+    //% weight=29
+    //% blockExternalInputs = 1
+    export function http_command():string {
+	check()
+        let a=receivei2cmessage("http_r=").substr(1)
+   	if (!a.includes("http_command="))
+           a=receivei2cmessage("http_r=").substr(1)
+	basic.pause(100)
+        a=a.substr(6)
+	return a
+    }
+
 	
 	
 	
