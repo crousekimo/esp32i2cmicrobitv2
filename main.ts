@@ -97,6 +97,16 @@ namespace microbiti2cesp32 {
 	a=a.substr(8)
         return a
     }  
+
+    //% group="2.MQTT"  
+    //% blockId=clearmqtt block="clear mqtt topic and message"
+    //% weight=57 
+    export function clearmqtt():void {
+        sendi2cmessage("clearmqtt=")
+	basic.pause(200)
+    }  
+	
+	
     //% group="2.MQTT"  
     //% blockId=sendmqtt block="send mqtt topic %topic | message %message "
     //% weight=56 
