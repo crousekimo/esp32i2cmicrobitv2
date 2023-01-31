@@ -25,6 +25,7 @@
     "microbiti2cesp32v2.thingspeak3|block": "連線到Thingspeak Channel ID %key | 讀取 %value1 資料",
     "microbiti2cesp32v2.thingspeak4|block": "連線到Thingspeak key %key | 寫入 Fields value | Field1 value %value1 || Field2 value %value2 Field3 value %value3 Field4 value %value4 Field5 value %value5 Field6 value %value6 Field7 value %value7",
     "microbiti2cesp32v2.http_command|block": "取得HTTP COMMAND",
+    "microbiti2cesp32v2.clear_httpcommand|block": "清除暫存HTTP COMMAND",
     "microbiti2cesp32v2.http_command1|block": "網頁顯示microbit資料 %data",
     "microbiti2cesp32v2.clearmqtt|block": "清除MQTT暫存的訊息與主題"
 }
