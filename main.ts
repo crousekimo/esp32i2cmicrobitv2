@@ -301,7 +301,7 @@ namespace microbiti2cesp32v2 {
     }
 	
     //% group="9.HTTP_COMMAND"
-    //% blockId=http_command() block="Read HTTP COMMAND"
+    //% blockId=http_command block="Read HTTP COMMAND"
     //% weight=29
     //% blockExternalInputs = 1
     export function http_command():string {
@@ -315,8 +315,21 @@ namespace microbiti2cesp32v2 {
     }
 	
     //% group="9.HTTP_COMMAND"
+    //% blockId=clear_httpcommand block="Clear HTTP COMMAND"
+    //% weight=28
+    export function clear_httpcommand():void {
+	check()
+        let a=receivei2cmessage("http_r=").substr(1)
+   	if (!a.includes("http_r"))
+           a=receivei2cmessage("http_r=").substr(1)
+	basic.pause(100)
+        a=a.substr(6)
+	return a
+    }
+	
+    //% group="9.HTTP_COMMAND"
     //% blockId=http_command1() block="Microbit data %data"
-    //% weight=29
+    //% weight=27
     export function http_command1(data: string):void {
         sendi2cmessage("http_d="+data) 
 	basic.pause(200)
