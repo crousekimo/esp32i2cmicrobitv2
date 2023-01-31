@@ -79,7 +79,7 @@ namespace microbiti2cesp32 {
     export function ReceiveMqttTopic():string {
         let a=receivei2cmessage("mqttrect=").substr(1)
 	basic.pause(100)
-   	if (!a.includes("mqttrecm"))
+   	if (!a.includes("mqttrect"))
         a=receivei2cmessage("mqttrect=").substr(1)
 	basic.pause(100)
         a=a.substr(8)
