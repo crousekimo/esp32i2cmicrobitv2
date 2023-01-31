@@ -323,7 +323,7 @@ namespace microbiti2cesp32v2 {
     }
 	
     //% group="9.HTTP_COMMAND"
-    //% blockId=http_command1() block="Microbit data %data"
+    //% blockId=http_command1 block="Microbit data %data"
     //% weight=27
     export function http_command1(data: string):void {
         sendi2cmessage("http_d="+data) 
