@@ -318,13 +318,8 @@ namespace microbiti2cesp32v2 {
     //% blockId=clear_httpcommand block="Clear HTTP COMMAND"
     //% weight=28
     export function clear_httpcommand():void {
-	check()
-        let a=receivei2cmessage("http_r=").substr(1)
-   	if (!a.includes("http_r"))
-           a=receivei2cmessage("http_r=").substr(1)
-	basic.pause(100)
-        a=a.substr(6)
-	return a
+        sendi2cmessage("clear_httpcommand=") 
+	basic.pause(200)
     }
 	
     //% group="9.HTTP_COMMAND"
