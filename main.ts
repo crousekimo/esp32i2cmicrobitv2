@@ -399,7 +399,7 @@ namespace microbiti2cesp32v2 {
     NumberFormat.Int8LE,
     false
     )
-    basic.pause(2000)
+    basic.pause(1000)
     i2cmessage2=""
     let dd = pins.i2cReadBuffer(8,952,false)
     for (let index = 0; index <= 718; index++) {
